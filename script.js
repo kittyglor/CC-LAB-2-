@@ -1,8 +1,16 @@
 function preload() {
     myFont = loadFont('PilkiusRomeus-YwDL.ttf');
-  }
+}
 
 function setup() {
+
+    window.addEventListener("keydown", function (e) {
+        // check if the key pressed is one of the arrow keys or spacebar
+        if ([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+            e.preventDefault(); // prevent the default action (scrolling)
+        }
+    }, false);
+
     let canvas = createCanvas(800, 500)
     canvas.parent("p5-canvas-container");
 
