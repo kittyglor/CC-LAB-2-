@@ -1,22 +1,37 @@
+
+
 const grid = document.querySelector('.grid');
-    const imageUrl = 'tb1.png'; // Replace with your image URL
+let imageUrl1 = 'assets/tb1.png'; // Replace with your image URL
+let imageUrl2 = 'assets/tb2.png'; // alt image
 
-    for (let i = 0; i < 20_000; i++) {
-      const img = document.createElement('img');
-      img.src = imageUrl;
-      img.alt = 'Teddy Bear';
-      grid.appendChild(img);
+for (let i = 0; i < 20_000; i++) {
+  if (i < 10_000) {
+    const img = document.createElement('img');
+    img.src = imageUrl1;
+    img.alt = 'Teddy Bear';
+    grid.appendChild(img);
+  } else {
+    const img = document.createElement('img');
+    img.src = imageUrl2;
+    img.alt = 'Teddy Bear';
+    grid.appendChild(img);
+  }
 
-    }
+}
 
 
+const link = document.querySelector('.main-link-box');
 
+window.addEventListener('scroll', () => {
+  const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  const scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+  const clientHeight = document.documentElement.clientHeight || window.innerHeight;
 
+  const scrollPercent = (scrollTop / (scrollHeight - clientHeight));
 
-
-
-
-
+  // Update the text inside the <a> tag
+  link.textContent = `${(scrollPercent * 20_000).toFixed()} bears`;
+});
 
 // let soundFiles = [
 //   "assets/beat.mp3",

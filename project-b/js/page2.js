@@ -1,20 +1,3 @@
-// let sound;
-
-// function preload() {
-//   // Load the sound file
-//   sound = loadSound('../assets/beat.mp3'); // Replace with your sound file
-// }
-
-// function setup() {
-//   noCanvas(); // No canvas needed if you're just playing a sound
-//   sound.play(); // Play the sound when the page loads
-// }
-
-
-
-
-
-
 let sound;
 
 function preload() {

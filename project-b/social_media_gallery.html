@@ -7,13 +7,13 @@
 
   <title>Project B</title>
 
-  <link rel="stylesheet" type="text/css" href="css/art_installation.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 
   <script src="lib/p5.js"></script>
   <script src="lib/p5.sound.js"></script>
 </head>
 
-<body>
+<body class="art-installation">
 
   <div class="main-container">
     <div class="main-title-box">
@@ -24,14 +24,21 @@
       <p>
         Put description here
       </p>
-      <div class="image-container">
-        <img src="tb1.png" alt="Image 1">
-        <img src="tb2.png" alt="Image 2">
-        <img src="tb3.png" alt="Image 3">
+      <div class="post-container">
+        <div class="post" id="post-01"></div>
+        <div class="post" id="post-02"></div>
+        <div class="post" id="post-03"></div>
+        <!-- <img src="assets/tb1.png" alt="Image 1"> -->
+        <!-- <img src="assets/tb2.png" alt="Image 2"> -->
+        <!-- <img src="assets/tb3.png" alt="Image 3"> -->
       </div>
     </div>
     <div class="main-link-box">
       <a href="about_me.html">Next</a>
+      <div
+        style="position: fixed; bottom: 30px; right: 85vw; cursor: pointer; color: black; text-decoration: none; font-size: 50px;">
+        <a href="intermediate.html">Back</a>
+      </div>
     </div>
   </div>
 
